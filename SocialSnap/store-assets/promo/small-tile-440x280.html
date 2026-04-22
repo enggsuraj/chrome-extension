@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SocialSnap — Small promo tile</title>
+  <style>
+    html, body { margin: 0; padding: 0; width: 440px; height: 280px; overflow: hidden; }
+    .tile {
+      width: 440px; height: 280px;
+      position: relative;
+      background:
+        radial-gradient(500px 300px at 80% 20%, rgba(124,92,255,0.35), transparent 60%),
+        radial-gradient(500px 300px at 10% 100%, rgba(14,165,233,0.25), transparent 60%),
+        linear-gradient(135deg, #111114 0%, #1a1a22 100%);
+      color: #fafafa;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 32px 36px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tile::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(500px 300px at 30% 40%, #000 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(500px 300px at 30% 40%, #000 20%, transparent 70%);
+      pointer-events: none;
+    }
+    .row {
+      display: flex; align-items: center; gap: 14px;
+      position: relative; z-index: 2;
+    }
+    .logo {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+      display: grid; place-items: center;
+      color: white;
+      box-shadow: 0 12px 32px rgba(124,92,255,0.45), inset 0 0 0 0.5px rgba(255,255,255,0.25);
+    }
+    .logo svg { width: 30px; height: 30px; }
+    .name { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+    .tag { color: #b4b4b8; font-size: 13px; margin-top: 2px; letter-spacing: -0.005em; }
+    .hero {
+      font-size: 30px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.08;
+      position: relative; z-index: 2;
+    }
+    .hero .grad {
+      background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .chips {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      position: relative; z-index: 2;
+    }
+    .chip {
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e4e4e7;
+      backdrop-filter: blur(6px);
+    }
+    .chip .swatch {
+      display: inline-block;
+      width: 7px; height: 7px; border-radius: 999px;
+      margin-right: 6px; vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="tile">
+    <div class="row">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+      </div>
+      <div>
+        <div class="name">SocialSnap</div>
+        <div class="tag">Chrome Extension · Free · No tracking</div>
+      </div>
+    </div>
+
+    <div class="hero">Every <span class="grad">profile,</span><br/>email &amp; phone —<br/>one click.</div>
+
+    <div class="chips">
+      <span class="chip"><span class="swatch" style="background:#ff3333"></span>YouTube</span>
+      <span class="chip"><span class="swatch" style="background:#e4405f"></span>Instagram</span>
+      <span class="chip"><span class="swatch" style="background:#1d9bf0"></span>X</span>
+      <span class="chip"><span class="swatch" style="background:#0077b5"></span>LinkedIn</span>
+      <span class="chip"><span class="swatch" style="background:#ff4500"></span>Reddit</span>
+      <span class="chip"><span class="swatch" style="background:#000"></span>GitHub</span>
+      <span class="chip">+15 more</span>
+    </div>
+  </div>
+</body>
+</html>

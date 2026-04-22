@@ -28,11 +28,29 @@ Chrome extension that extracts social media profile links, email addresses, and 
 
 - `manifest.json` — MV3 manifest (needs `activeTab` + `scripting`).
 - `popup.html` / `popup.css` / `popup.js` — extension popup UI.
-- `icons/icon.svg` — app icon.
+- `icons/` — app icons (16, 32, 48, 128 PNG + source SVG).
+- `scripts/build-webstore.sh` — builds a versioned `SocialSnap-webstore-v<version>.zip` upload package.
+- `scripts/build-store-assets.sh` — regenerates all store screenshots and the promo tile.
+- `store-assets/STORE_LISTING.md` — paste-ready Chrome Web Store listing copy + permission justifications.
+- `store-assets/screenshots/` — 4 × 1280×800 PNGs ready to upload.
+- `store-assets/promo/small-tile-440x280.png` — small promo tile.
+- `PRIVACY.md` / `privacy.html` — privacy policy (markdown + GitHub-Pages-ready HTML).
 
 ## Permissions
 
-- `activeTab` + `scripting` — required to run the scanner in the current tab when you click the icon. No data leaves your browser.
+- `activeTab` + `scripting` — required to run the scanner in the current tab when you click the icon. No data leaves your browser. See [`PRIVACY.md`](./PRIVACY.md) for details.
+
+## Publishing to the Chrome Web Store
+
+```bash
+# 1. Build the upload zip (reads the version from manifest.json)
+bash scripts/build-webstore.sh
+
+# 2. (Optional) Re-render listing screenshots + promo tile
+bash scripts/build-store-assets.sh
+```
+
+Then follow [`store-assets/STORE_LISTING.md`](./store-assets/STORE_LISTING.md) — every field of the Developer Dashboard is pre-written there.
 
 ## Notes
 

@@ -1,0 +1,195 @@
+/* Screenshot stage — 1280x800, left = marketing, right = popup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 800px;
+  overflow: hidden;
+}
+
+html, body { background: #fafaf9; }
+html:has(.stage.dark), body:has(.stage.dark) { background: #0a0a0b; }
+
+.stage {
+  width: 1280px;
+  height: 800px;
+  position: fixed;
+  top: 0; left: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #0a0a0a;
+  background:
+    radial-gradient(900px 500px at 12% 10%, rgba(124,92,255,0.15), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(14,165,233,0.12), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #fafaf9 60%);
+}
+.stage.dark {
+  color: #fafafa;
+  background:
+    radial-gradient(900px 500px at 12% 10%, rgba(167,139,250,0.22), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(56,189,248,0.18), transparent 60%),
+    linear-gradient(180deg, #111114 0%, #0a0a0b 60%);
+}
+
+.stage::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(900px 600px at 20% 30%, #000 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(900px 600px at 20% 30%, #000 40%, transparent 80%);
+  pointer-events: none;
+}
+.stage.dark::after {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+}
+
+.copy {
+  position: absolute;
+  left: 72px;
+  top: 110px;
+  width: 540px;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: rgba(255,255,255,0.7);
+  color: #0a0a0a;
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+  margin-bottom: 24px;
+}
+.stage.dark .eyebrow {
+  background: rgba(255,255,255,0.06);
+  color: #fafafa;
+  border-color: rgba(255,255,255,0.1);
+}
+.eyebrow .dot {
+  width: 6px; height: 6px; border-radius: 999px;
+  background: linear-gradient(135deg, #7c5cff, #0ea5e9);
+}
+
+h1.big {
+  font-size: 64px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+h1.big .grad {
+  background: linear-gradient(135deg, #7c5cff 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stage.dark h1.big .grad {
+  background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+p.lead {
+  font-size: 19px;
+  line-height: 1.55;
+  color: #3f3f46;
+  margin: 0 0 28px;
+  max-width: 480px;
+}
+.stage.dark p.lead { color: #c4c4c8; }
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 15px;
+  color: #27272a;
+}
+.stage.dark .bullets { color: #d4d4d8; }
+.bullets li {
+  display: flex; align-items: center; gap: 10px;
+}
+.bullets .check {
+  width: 20px; height: 20px; border-radius: 999px;
+  background: linear-gradient(135deg, #7c5cff, #0ea5e9);
+  color: white;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(124,92,255,0.3);
+}
+.bullets .check svg { width: 12px; height: 12px; }
+
+/* Popup stage on the right */
+.popup-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 640px;
+  height: 800px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.popup-scale {
+  transform: scale(1.32);
+  transform-origin: center center;
+  filter: drop-shadow(0 40px 60px rgba(17, 24, 39, 0.18)) drop-shadow(0 10px 20px rgba(17, 24, 39, 0.08));
+}
+.stage.dark .popup-scale {
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.55)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+}
+
+/* The popup itself: reuse the real look via a scoped wrapper */
+.popup-mock {
+  width: 380px;
+  height: 560px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.stage.dark .popup-mock {
+  background: #121214;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Tiny cursor indicator for the "Search" shot */
+.cursor-tip {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+/* Watermark in the corner (subtle) */
+.wm {
+  position: absolute;
+  left: 72px;
+  bottom: 56px;
+  display: flex; align-items: center; gap: 10px;
+  color: #71717a;
+  font-size: 13px;
+  z-index: 2;
+}
+.stage.dark .wm { color: #a1a1aa; }
+.wm .logo-sm {
+  width: 24px; height: 24px; border-radius: 7px;
+  background: linear-gradient(135deg, #7c5cff, #0ea5e9);
+  display: grid; place-items: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(124,92,255,0.3);
+}
+.wm .logo-sm svg { width: 14px; height: 14px; }
