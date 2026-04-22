@@ -30,10 +30,13 @@ Chrome extension that extracts social media profile links, email addresses, and 
 - `popup.html` / `popup.css` / `popup.js` — extension popup UI.
 - `icons/` — app icons (16, 32, 48, 128 PNG + source SVG).
 - `scripts/build-webstore.sh` — builds a versioned `SocialSnap-webstore-v<version>.zip` upload package.
-- `scripts/build-store-assets.sh` — regenerates all store screenshots and the promo tile.
+- `scripts/build-store-assets.sh` — regenerates all store screenshots and both promo tiles.
+- `scripts/generate-store-icon.py` — regenerates the 128×128 store listing icon with recommended padding.
 - `store-assets/STORE_LISTING.md` — paste-ready Chrome Web Store listing copy + permission justifications.
+- `store-assets/icon-store-128.png` — 128×128 store listing icon (with 16px transparent padding).
 - `store-assets/screenshots/` — 4 × 1280×800 PNGs ready to upload.
 - `store-assets/promo/small-tile-440x280.png` — small promo tile.
+- `store-assets/promo/marquee-1400x560.png` — marquee promo tile (for featured placement).
 - `PRIVACY.md` / `privacy.html` — privacy policy (markdown + GitHub-Pages-ready HTML).
 
 ## Permissions

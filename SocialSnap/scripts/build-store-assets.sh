@@ -45,12 +45,19 @@ for shot in 01-hero-light 02-hero-dark 03-social-tab 04-search; do
   printf "  %s\n" "$SHOTS_DIR/$shot.png"
 done
 
-echo "Generating 440x280 promo tile..."
+echo "Generating 440x280 small promo tile..."
 "$CHROME" --headless=new --hide-scrollbars --no-sandbox --disable-gpu \
   --window-size=440,280 \
   --screenshot="$PROMO_DIR/small-tile-440x280.png" \
   "http://localhost:$PORT/$PROMO_DIR/small-tile-440x280.html" >/dev/null 2>&1
 printf "  %s\n" "$PROMO_DIR/small-tile-440x280.png"
+
+echo "Generating 1400x560 marquee promo tile..."
+"$CHROME" --headless=new --hide-scrollbars --no-sandbox --disable-gpu \
+  --window-size=1400,560 \
+  --screenshot="$PROMO_DIR/marquee-1400x560.png" \
+  "http://localhost:$PORT/$PROMO_DIR/marquee-1400x560.html" >/dev/null 2>&1
+printf "  %s\n" "$PROMO_DIR/marquee-1400x560.png"
 
 echo ""
 echo "Done. Files:"

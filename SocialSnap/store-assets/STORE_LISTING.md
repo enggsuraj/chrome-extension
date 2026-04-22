@@ -131,7 +131,7 @@ SocialSnap will stay free, fast, and private.
 | Screenshot 3 | 1280 × 800 | Recommended | `store-assets/screenshots/03-social-tab.png` |
 | Screenshot 4 | 1280 × 800 | Recommended | `store-assets/screenshots/04-search.png` |
 | Small promo tile | 440 × 280 | Recommended | `store-assets/promo/small-tile-440x280.png` |
-| Marquee promo | 1400 × 560 | Optional (featured only) | — |
+| Marquee promo tile | 1400 × 560 (24-bit PNG, no alpha) | Optional (required for featured placement) | `store-assets/promo/marquee-1400x560.png` |
 
 See `store-assets/screenshots/README.md` for how to regenerate.
 
@@ -202,6 +202,7 @@ social media extractor, social profiles, email finder, phone number extractor, c
 - [ ] Icon 128 × 128 auto-detected from manifest
 - [ ] At least one 1280 × 800 screenshot uploaded (use all four for stronger listing)
 - [ ] Small promo tile 440 × 280 uploaded
+- [ ] Marquee promo tile 1400 × 560 uploaded (recommended for featured placement)
 - [ ] Single purpose description pasted
 - [ ] `activeTab` justification pasted
 - [ ] `scripting` justification pasted
