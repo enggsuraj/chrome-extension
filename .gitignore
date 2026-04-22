@@ -12,7 +12,7 @@ node_modules/
 # Chrome packaging (private keys and release artifacts)
 *.crx
 *.pem
-*-webstore.zip
+*webstore*.zip
 
 # Tooling caches
 .playwright-mcp/
