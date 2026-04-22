@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Node / build
+node_modules/
+dist/
+*.log
+
+# Chrome packaging
+*.crx
+*.pem
+
+# Tooling caches
+.playwright-mcp/
+/tmp/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# QuickIP lives in its own repo (github.com/enggsuraj/QuickIP)
+QuickIP/

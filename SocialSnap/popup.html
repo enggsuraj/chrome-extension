@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SocialSnap</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </div>
+        <div class="title-block">
+          <h1>SocialSnap</h1>
+          <p class="subtitle" id="pageHost">Scanning…</p>
+        </div>
+      </div>
+      <button id="rescanBtn" class="icon-btn" title="Rescan page" aria-label="Rescan page">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+      </button>
+    </header>
+
+    <section class="stats" id="stats">
+      <button class="stat" data-filter="all">
+        <span class="stat-count" id="countAll">0</span>
+        <span class="stat-label">All</span>
+      </button>
+      <button class="stat" data-filter="social">
+        <span class="stat-count" id="countSocial">0</span>
+        <span class="stat-label">Social</span>
+      </button>
+      <button class="stat" data-filter="email">
+        <span class="stat-count" id="countEmail">0</span>
+        <span class="stat-label">Emails</span>
+      </button>
+      <button class="stat" data-filter="phone">
+        <span class="stat-count" id="countPhone">0</span>
+        <span class="stat-label">Phones</span>
+      </button>
+    </section>
+
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="searchInput" type="text" placeholder="Filter results…" />
+    </div>
+
+    <main id="results" class="results">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <span>Scanning page…</span>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <button id="copyAllBtn" class="ghost-btn" disabled>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        Copy visible
+      </button>
+      <button id="exportBtn" class="ghost-btn" disabled>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Export JSON
+      </button>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
