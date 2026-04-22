@@ -137,6 +137,18 @@ See `store-assets/screenshots/README.md` for how to regenerate.
 
 ---
 
+## 4a. Additional fields (Store listing tab)
+
+| Field | Value |
+|---|---|
+| Official URL | *Leave blank* (no Search-Console-verified domain) |
+| Homepage URL | `https://github.com/enggsuraj/chrome-extension/tree/main/SocialSnap` |
+| Support URL | `https://github.com/enggsuraj/chrome-extension/issues` |
+
+*Homepage URL can be upgraded later to `https://enggsuraj.github.io/chrome-extension/SocialSnap/` once a GitHub Pages landing page is added.*
+
+---
+
 ## 5. Privacy tab (in the Dashboard)
 
 ### Single purpose description
@@ -203,6 +215,8 @@ social media extractor, social profiles, email finder, phone number extractor, c
 - [ ] At least one 1280 × 800 screenshot uploaded (use all four for stronger listing)
 - [ ] Small promo tile 440 × 280 uploaded
 - [ ] Marquee promo tile 1400 × 560 uploaded (recommended for featured placement)
+- [ ] Homepage URL set to `https://github.com/enggsuraj/chrome-extension/tree/main/SocialSnap`
+- [ ] Support URL set to `https://github.com/enggsuraj/chrome-extension/issues`
 - [ ] Single purpose description pasted
 - [ ] `activeTab` justification pasted
 - [ ] `scripting` justification pasted
