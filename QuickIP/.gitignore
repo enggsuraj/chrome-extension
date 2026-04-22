@@ -1,0 +1,8 @@
+# Node.js
+node_modules/
+
+# Chrome pack output (keep .pem private; do not commit)
+dist.crx
+dist.pem
+*.pem
+QuickIP-webstore.zip

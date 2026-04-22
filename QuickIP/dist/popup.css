@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 240px;
+  font-size: 14px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  padding: 10px;
+  background-color: #fffffe;
+  color: #272343;
+}
+
+.dateContainer,
+.timeContainer,
+.titleContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rowIcon {
+  flex-shrink: 0;
+  color: #272343;
+}
+
+.dateText {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-left: 5px;
+  max-width: calc(100% - 32px);
+  line-height: 1.35;
+}
+
+#weekday.weekdaySuffix {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.75;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.titleContainer {
+  margin: 5px 0 10px 0;
+}
+
+.timeRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Monospace clock: stable width as digits update */
+#time {
+  display: inline-block;
+  min-width: 11.5ch;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+#date {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.timeZone {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.75;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.ipContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  margin: 0;
+}
+
+#ip {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: calc(100% - 76px);
+  font-size: 18px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#ip.ip--pending {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+#location {
+  font-size: 10px;
+  line-height: 1.4;
+  min-height: 2.8em;
+  opacity: 0.7;
+}
+
+#copy {
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 8px;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #d3d3d3;
+  margin-left: 10px;
+}
+
+#copy:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}

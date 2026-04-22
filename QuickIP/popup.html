@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickIP</title>
+  <link rel="preconnect" href="https://ipinfo.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://img.icons8.com" />
+  <script src="prefetch.js"></script>
+  <link rel="stylesheet" href="popup.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap"
+  />
+  <link rel="icon" type="image/x-icon" href="assets/QuickIP.png" />
+  <script src="popup.js" defer></script>
+</head>
+
+<body>
+  <header class="titleContainer">
+    <div>QuickIP</div>
+  </header>
+
+  <main>
+    <section class="infoContainer">
+      <div class="dateContainer">
+        <img width="24" height="24" decoding="async" src="https://img.icons8.com/fluency-systems-regular/48/calendar--v1.png"
+          alt="Calendar icon" />
+        <div class="dateText">
+          <span id="date"></span><span id="weekday" class="weekdaySuffix"></span>
+        </div>
+      </div>
+      <div class="timeContainer">
+        <img width="24" height="24" decoding="async" src="https://img.icons8.com/badges/48/time-span.png"
+          alt="Clock icon" />
+        <div class="timeRow">
+          <span id="time"></span>
+          <span id="timeZone" class="timeZone" title=""></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="locationContainer">
+      <div id="location"></div>
+    </div>
+
+    <div class="ipContainer">
+      <div id="ip"></div>
+      <button id="copy" type="button" aria-label="Copy IP address">
+        <span>copy</span>
+      </button>
+    </div>
+  </main>
+
+</body>
+
+</html>

@@ -7,12 +7,12 @@ Thumbs.db
 
 # Node / build
 node_modules/
-dist/
 *.log
 
-# Chrome packaging
+# Chrome packaging (private keys and release artifacts)
 *.crx
 *.pem
+*-webstore.zip
 
 # Tooling caches
 .playwright-mcp/
@@ -23,6 +23,3 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-
-# QuickIP lives in its own repo (github.com/enggsuraj/QuickIP)
-QuickIP/
