@@ -29,7 +29,7 @@ Use one of these — the first is preferred:
 
 Alternatives:
 
-> Find every social link, email, and phone number on a page — with real profile detection, not just random URLs. (113 chars)
+> Find social profiles, emails, and phone numbers on the current page — real profile detection, not raw URLs. (108 chars)
 
 > One click. Every social profile, email, and phone on the current page. Search, copy, export. (94 chars)
 
@@ -40,67 +40,52 @@ Alternatives:
 Paste the following directly into the "Detailed description" field. Chrome Web Store supports plain text with simple line breaks; avoid Markdown syntax in the input field itself.
 
 ```
-SocialSnap finds every social media profile, email, and phone number on the current webpage — instantly.
+SocialSnap finds the social profiles, email addresses, and phone numbers on the current webpage — instantly, with one click.
 
-Built for creators, marketers, recruiters, researchers, and anyone who outgrew copy-pasting links one by one.
+Built for creators, marketers, recruiters, and researchers who outgrew copy-pasting links one by one.
 
 
-✦ WHY SOCIALSNAP
+✦ WHAT MAKES IT DIFFERENT
 
-Most "link scrapers" dump every URL on a page at you. SocialSnap is different. It recognizes real profiles:
+Most link scrapers dump every URL on a page at you. SocialSnap recognizes real profiles instead of raw URLs:
 
-• YouTube channel URLs, not random video links
-• Instagram profiles, not reels or posts
-• X (Twitter) handles, not individual tweets
-• LinkedIn people and companies, not job posts
-• GitHub users and orgs, not issues or PRs
-• Reddit subreddits and users, not single threads
-• TikTok profiles, Threads, Pinterest, Dribbble, Behance, Medium, Mastodon, Snapchat, Telegram, WhatsApp, Twitch, Spotify, SoundCloud, Vimeo, Facebook pages, Discord invites — and more.
+• It distinguishes a channel page from a single video.
+• It distinguishes a profile from an individual post, tweet, or reel.
+• It distinguishes a user or company page from a job post, issue, or thread.
+• It pulls clean handles like "@yourname" or "r/subreddit" from the link itself.
 
-It also extracts every email address and phone number in the page text and HTML, not just mailto:/tel: links.
+It works across the major social, video, audio, design, writing, and messaging networks, and it also extracts every email address and phone number found in the page text — not only the ones inside mailto: or tel: links.
 
 
 ✦ WHAT YOU GET
 
-• Grouped results — social profiles, emails, phones, cleanly separated
-• Real handle extraction — sees "@yourname" or "r/subreddit", not just a URL
-• Instant search — filter visible results by platform, handle, domain, or number
-• One-click copy on every row, plus "Copy visible" to grab the whole filtered list
-• Export JSON — piped straight into a spreadsheet, CRM, or script
-• Beautiful, modern UI inspired by Linear, Raycast, and ChatGPT
-• Automatic light and dark mode — follows your system theme
-• Rescan button — click to re-run after the page updates
+• Grouped results — social profiles, emails, and phone numbers cleanly separated.
+• Instant search — filter visible results by platform, handle, domain, or number.
+• One-click copy on every row, plus "Copy visible" to grab the whole filtered list.
+• Export to JSON — pipe straight into a spreadsheet, CRM, or script.
+• Clean, modern UI with automatic light and dark mode that follows your system.
+• Rescan button — re-run after the page updates.
 
 
-✦ PRIVACY — READ THIS FIRST
+✦ PRIVACY
 
-SocialSnap does not collect, store, or transmit any data. Ever.
+SocialSnap does not collect, store, or transmit any data.
 
-• No analytics. No tracking. No background tasks. No servers.
-• Scanning only happens when YOU click the extension icon.
-• Scanning only reads the ACTIVE tab, one time, per click.
-• All results stay in your browser and disappear when you close the popup.
-• No account, no login, no permissions beyond what is strictly required.
+• No analytics, no tracking, no background tasks, no servers.
+• Scanning only runs when you click the toolbar icon.
+• Scanning only reads the active tab, one time, per click.
+• Results stay in your browser and disappear when you close the popup.
+• No account, no login.
 
 Full privacy policy: https://enggsuraj.github.io/chrome-extension/SocialSnap/privacy.html
 
 
-✦ PERMISSIONS EXPLAINED
+✦ PERMISSIONS
 
-• "activeTab" — Required to read the DOM of the page you are currently viewing, only at the moment you click the icon.
-• "scripting" — Required to run a one-shot scanner in the active tab to collect links, emails, and phones from that page.
+• "activeTab" — read the DOM of the tab you are currently viewing, only at the moment you click the icon.
+• "scripting" — run a one-shot scanner in that tab to collect links, emails, and phones, then return the result to the popup.
 
-SocialSnap does NOT use: storage, cookies, history, tabs (listing or switching), host permissions for arbitrary sites, remote code, or any API that persists data.
-
-
-✦ GREAT FOR
-
-• Creators finding partnership / collab contacts on brand or agency sites
-• Marketers doing outreach and link research
-• Recruiters pulling candidate profiles and contact info
-• Researchers aggregating links across long articles or directories
-• Developers auditing author/contributor footprints on a project page
-• Anyone who hates re-typing emails and phone numbers
+SocialSnap does not use storage, cookies, history, broad host permissions, or remote code.
 
 
 ✦ HOW TO USE
@@ -108,13 +93,12 @@ SocialSnap does NOT use: storage, cookies, history, tabs (listing or switching),
 1. Pin SocialSnap to your Chrome toolbar.
 2. Open any webpage.
 3. Click the SocialSnap icon.
-4. Results appear grouped by type. Use the tabs to filter, the search box to narrow, and the buttons to copy or export.
+4. Use the tabs to switch between profiles, emails, and phones; use search to narrow; use the buttons to copy or export.
 
 
 ✦ FEEDBACK
 
-Ideas, platform requests, or bug reports: open an issue at
-https://github.com/enggsuraj/chrome-extension/issues
+Ideas or bug reports: https://github.com/enggsuraj/chrome-extension/issues
 
 SocialSnap will stay free, fast, and private.
 ```
@@ -196,15 +180,7 @@ See `store-assets/screenshots/README.md` for how to regenerate.
 
 ---
 
-## 6. Keywords / search terms to weave into the description
-
-Already included naturally above, listed here for reference:
-
-social media extractor, social profiles, email finder, phone number extractor, contact scraper, lead generation, outreach, YouTube channel finder, Instagram profile finder, LinkedIn extractor, X Twitter handle, GitHub user, Reddit user, TikTok, Threads, Pinterest, Dribbble, Behance, Medium, Mastodon, Snapchat, Telegram, WhatsApp, Twitch, Spotify, SoundCloud, Vimeo, Discord, contact export, JSON export, recruiter tool, marketer tool, creator economy.
-
----
-
-## 7. Submission checklist
+## 6. Submission checklist
 
 - [ ] $5 one-time developer fee paid at https://chrome.google.com/webstore/devconsole
 - [ ] `SocialSnap-webstore-v1.0.0.zip` uploaded
