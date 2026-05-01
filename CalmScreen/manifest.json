@@ -3,6 +3,7 @@
   "name": "CalmScreen — Eye Comfort",
   "version": "1.0.0",
   "description": "A simple eye-comfort layer for Chrome. Two sliders (brightness, warmth), three presets (day, evening, night). All local.",
+  "homepage_url": "https://github.com/enggsuraj/chrome-extension/tree/main/CalmScreen",
   "icons": {
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
