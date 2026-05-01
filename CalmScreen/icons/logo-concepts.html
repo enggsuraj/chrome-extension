@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CalmScreen — logo concepts</title>
+    <style>
+      html, body {
+        margin: 0; padding: 0;
+        width: 1280px; height: 1180px;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+        color: #1a1a24;
+      }
+      .stage {
+        width: 1280px; height: 1180px;
+        position: fixed; top: 0; left: 0;
+        background:
+          radial-gradient(900px 600px at 50% 0%, rgba(91, 141, 239, 0.10), transparent 60%),
+          radial-gradient(900px 600px at 50% 100%, rgba(232, 155, 90, 0.08), transparent 60%),
+          #f4f5f9;
+        padding: 44px 56px 56px;
+        box-sizing: border-box;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 36px;
+      }
+      .header h1 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin: 0 0 6px;
+      }
+      .header p {
+        font-size: 13px;
+        color: #6a6a72;
+        margin: 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px 24px;
+      }
+      .card {
+        text-align: center;
+        background: white;
+        border-radius: 14px;
+        padding: 18px 12px 14px;
+        border: 1px solid rgba(20, 30, 60, 0.06);
+        box-shadow: 0 4px 14px rgba(20, 30, 60, 0.05);
+      }
+      .icon-128 {
+        width: 100px; height: 100px;
+        margin: 0 auto 12px;
+        display: block;
+      }
+      .num {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #5b8def;
+        background: rgba(91, 141, 239, 0.10);
+        padding: 2px 8px;
+        border-radius: 999px;
+        margin-bottom: 6px;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .desc {
+        font-size: 11px;
+        color: #6a6a72;
+        margin-top: 3px;
+        line-height: 1.4;
+      }
+      .small-row {
+        display: flex; align-items: center; justify-content: center;
+        gap: 5px;
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px dashed rgba(20, 30, 60, 0.08);
+      }
+      .small-row small { font-size: 9px; color: #9090a0; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; }
+      .icon-16 { width: 22px; height: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="header">
+        <h1>CalmScreen — pick a logo</h1>
+        <p>12 options. Each rendered at 100px and 22px (toolbar size).</p>
+      </div>
+
+      <div class="grid">
+
+        <!-- 1: SUNRISE & BOOK -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <defs>
+              <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5b8def"/><stop offset="55%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#e89b5a"/>
+              </linearGradient>
+            </defs>
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <circle cx="64" cy="40" r="11" fill="white"/>
+            <g stroke="white" stroke-width="3.5" stroke-linecap="round">
+              <line x1="64" y1="20" x2="64" y2="14"/><line x1="46" y1="28" x2="41" y2="23"/><line x1="82" y1="28" x2="87" y2="23"/>
+              <line x1="38" y1="40" x2="32" y2="40"/><line x1="90" y1="40" x2="96" y2="40"/>
+            </g>
+            <path d="M22 78 Q44 70, 64 76 Q84 70, 106 78 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white" opacity="0.95"/>
+            <line x1="64" y1="76" x2="64" y2="100" stroke="#7a6fd0" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="num">01</div>
+          <div class="name">Sunrise & Book</div>
+          <div class="desc">Read by warm light</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <circle cx="64" cy="40" r="11" fill="white"/>
+              <g stroke="white" stroke-width="3.5" stroke-linecap="round"><line x1="64" y1="20" x2="64" y2="14"/><line x1="46" y1="28" x2="41" y2="23"/><line x1="82" y1="28" x2="87" y2="23"/><line x1="38" y1="40" x2="32" y2="40"/><line x1="90" y1="40" x2="96" y2="40"/></g>
+              <path d="M22 78 Q44 70, 64 76 Q84 70, 106 78 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white"/>
+              <line x1="64" y1="76" x2="64" y2="100" stroke="#7a6fd0" stroke-width="2.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 2: CALM OPEN EYE -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <path d="M22 64 Q64 30, 106 64 Q64 98, 22 64 Z" fill="white"/>
+            <circle cx="64" cy="64" r="16" fill="#e8c4a0"/>
+            <circle cx="64" cy="64" r="7" fill="#3a2820"/>
+            <circle cx="69" cy="60" r="2.5" fill="white"/>
+            <path d="M22 64 Q64 30, 106 64" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <div class="num">02</div>
+          <div class="name">Calm Eye</div>
+          <div class="desc">Eye comfort, said plainly</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M22 64 Q64 30, 106 64 Q64 98, 22 64 Z" fill="white"/>
+              <circle cx="64" cy="64" r="16" fill="#e8c4a0"/>
+              <circle cx="64" cy="64" r="7" fill="#3a2820"/>
+              <path d="M22 64 Q64 30, 106 64" fill="none" stroke="white" stroke-width="3.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 3: READING BULB -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <path d="M64 22 C42 22, 30 38, 30 56 C30 70, 38 80, 46 86 L46 92 L82 92 L82 86 C90 80, 98 70, 98 56 C98 38, 86 22, 64 22 Z" fill="white"/>
+            <rect x="50" y="94" width="28" height="6" rx="2" fill="white" opacity="0.85"/>
+            <rect x="54" y="102" width="20" height="4" rx="2" fill="white" opacity="0.7"/>
+            <g transform="translate(0, 4)">
+              <path d="M44 60 Q54 54, 64 58 Q74 54, 84 60 L84 72 Q74 68, 64 70 Q54 68, 44 72 Z" fill="none" stroke="#e89b5a" stroke-width="3" stroke-linejoin="round"/>
+              <line x1="64" y1="58" x2="64" y2="70" stroke="#e89b5a" stroke-width="2.5"/>
+            </g>
+          </svg>
+          <div class="num">03</div>
+          <div class="name">Reading Bulb</div>
+          <div class="desc">The right light to read by</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M64 22 C42 22, 30 38, 30 56 C30 70, 38 80, 46 86 L46 92 L82 92 L82 86 C90 80, 98 70, 98 56 C98 38, 86 22, 64 22 Z" fill="white"/>
+              <rect x="50" y="94" width="28" height="6" rx="2" fill="white" opacity="0.85"/>
+              <rect x="54" y="102" width="20" height="4" rx="2" fill="white" opacity="0.7"/>
+              <g transform="translate(0, 4)"><path d="M44 60 Q54 54, 64 58 Q74 54, 84 60 L84 72 Q74 68, 64 70 Q54 68, 44 72 Z" fill="none" stroke="#e89b5a" stroke-width="4"/></g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 4: NIGHT READER -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <defs>
+              <mask id="moonmask4">
+                <rect width="128" height="128" fill="black"/>
+                <circle cx="84" cy="36" r="20" fill="white"/>
+                <circle cx="76" cy="32" r="18" fill="black"/>
+              </mask>
+            </defs>
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <rect width="128" height="128" mask="url(#moonmask4)" fill="white"/>
+            <circle cx="36" cy="30" r="2" fill="white" opacity="0.85"/>
+            <circle cx="48" cy="46" r="1.5" fill="white" opacity="0.7"/>
+            <circle cx="100" cy="62" r="1.5" fill="white" opacity="0.7"/>
+            <path d="M22 76 Q44 68, 64 74 Q84 68, 106 76 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white"/>
+            <line x1="64" y1="74" x2="64" y2="100" stroke="#7a6fd0" stroke-width="2.5"/>
+          </svg>
+          <div class="num">04</div>
+          <div class="name">Night Reader</div>
+          <div class="desc">Read into the night</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <rect width="128" height="128" mask="url(#moonmask4)" fill="white"/>
+              <path d="M22 76 Q44 68, 64 74 Q84 68, 106 76 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 5: SLEEPING EYE -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <path d="M22 64 Q64 92, 106 64" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+            <g stroke="white" stroke-width="4" stroke-linecap="round">
+              <line x1="36" y1="78" x2="32" y2="86"/>
+              <line x1="50" y1="84" x2="48" y2="94"/>
+              <line x1="64" y1="86" x2="64" y2="96"/>
+              <line x1="78" y1="84" x2="80" y2="94"/>
+              <line x1="92" y1="78" x2="96" y2="86"/>
+            </g>
+          </svg>
+          <div class="num">05</div>
+          <div class="name">Resting Eye</div>
+          <div class="desc">A closed, peaceful eye</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M22 64 Q64 92, 106 64" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/>
+              <g stroke="white" stroke-width="4" stroke-linecap="round"><line x1="36" y1="78" x2="32" y2="86"/><line x1="50" y1="84" x2="48" y2="94"/><line x1="64" y1="86" x2="64" y2="96"/><line x1="78" y1="84" x2="80" y2="94"/><line x1="92" y1="78" x2="96" y2="86"/></g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 6: PURE OPEN BOOK -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <path d="M20 40 Q44 32, 64 40 Q84 32, 108 40 L108 92 Q84 84, 64 92 Q44 84, 20 92 Z" fill="white"/>
+            <line x1="64" y1="40" x2="64" y2="92" stroke="#7a6fd0" stroke-width="2.5" stroke-linecap="round"/>
+            <g stroke="#bcb4d6" stroke-width="2" stroke-linecap="round" opacity="0.7">
+              <line x1="32" y1="50" x2="56" y2="48"/>
+              <line x1="32" y1="60" x2="56" y2="58"/>
+              <line x1="32" y1="70" x2="56" y2="68"/>
+              <line x1="72" y1="48" x2="96" y2="50"/>
+              <line x1="72" y1="58" x2="96" y2="60"/>
+              <line x1="72" y1="68" x2="96" y2="70"/>
+            </g>
+          </svg>
+          <div class="num">06</div>
+          <div class="name">Pure Book</div>
+          <div class="desc">Reading, distilled</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M20 40 Q44 32, 64 40 Q84 32, 108 40 L108 92 Q84 84, 64 92 Q44 84, 20 92 Z" fill="white"/>
+              <line x1="64" y1="40" x2="64" y2="92" stroke="#7a6fd0" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 7: READING GLASSES -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <g fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="40" cy="68" r="18"/>
+              <circle cx="88" cy="68" r="18"/>
+              <line x1="58" y1="64" x2="70" y2="64"/>
+              <path d="M22 68 L20 50"/>
+              <path d="M106 68 L108 50"/>
+            </g>
+          </svg>
+          <div class="num">07</div>
+          <div class="name">Reading Glasses</div>
+          <div class="desc">Classic eyewear</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <g fill="none" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="40" cy="68" r="18"/><circle cx="88" cy="68" r="18"/><line x1="58" y1="64" x2="70" y2="64"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 8: SUN -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <circle cx="64" cy="64" r="20" fill="white"/>
+            <g stroke="white" stroke-width="5" stroke-linecap="round">
+              <line x1="64" y1="22" x2="64" y2="34"/>
+              <line x1="64" y1="94" x2="64" y2="106"/>
+              <line x1="22" y1="64" x2="34" y2="64"/>
+              <line x1="94" y1="64" x2="106" y2="64"/>
+              <line x1="34" y1="34" x2="42" y2="42"/>
+              <line x1="86" y1="86" x2="94" y2="94"/>
+              <line x1="34" y1="94" x2="42" y2="86"/>
+              <line x1="86" y1="42" x2="94" y2="34"/>
+            </g>
+          </svg>
+          <div class="num">08</div>
+          <div class="name">Sun</div>
+          <div class="desc">Soft daylight</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <circle cx="64" cy="64" r="22" fill="white"/>
+              <g stroke="white" stroke-width="6" stroke-linecap="round">
+                <line x1="64" y1="20" x2="64" y2="34"/><line x1="64" y1="94" x2="64" y2="108"/><line x1="20" y1="64" x2="34" y2="64"/><line x1="94" y1="64" x2="108" y2="64"/>
+                <line x1="32" y1="32" x2="42" y2="42"/><line x1="86" y1="86" x2="96" y2="96"/><line x1="32" y1="96" x2="42" y2="86"/><line x1="86" y1="42" x2="96" y2="32"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 9: CRESCENT MOON -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <defs>
+              <mask id="moonmask9">
+                <rect width="128" height="128" fill="black"/>
+                <circle cx="68" cy="64" r="34" fill="white"/>
+                <circle cx="56" cy="58" r="32" fill="black"/>
+              </mask>
+            </defs>
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <rect width="128" height="128" mask="url(#moonmask9)" fill="white"/>
+            <circle cx="32" cy="38" r="2.5" fill="white" opacity="0.9"/>
+            <circle cx="42" cy="58" r="1.8" fill="white" opacity="0.7"/>
+            <circle cx="34" cy="86" r="2" fill="white" opacity="0.8"/>
+          </svg>
+          <div class="num">09</div>
+          <div class="name">Crescent Moon</div>
+          <div class="desc">Quiet, calm, focused</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <rect width="128" height="128" mask="url(#moonmask9)" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 10: CANDLE -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <!-- flame -->
+            <path d="M64 26 C58 36, 52 44, 52 56 C52 68, 58 76, 64 76 C70 76, 76 68, 76 56 C76 44, 70 36, 64 26 Z" fill="white"/>
+            <path d="M64 38 C61 44, 58 50, 58 58 C58 66, 61 70, 64 70 C67 70, 70 66, 70 58 C70 50, 67 44, 64 38 Z" fill="#ffd9a8"/>
+            <!-- wick -->
+            <line x1="64" y1="78" x2="64" y2="86" stroke="#3a2820" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- candle body -->
+            <rect x="50" y="86" width="28" height="22" rx="3" fill="white" opacity="0.95"/>
+            <!-- candle drip -->
+            <path d="M50 96 Q47 100, 50 104" fill="white" opacity="0.95"/>
+          </svg>
+          <div class="num">10</div>
+          <div class="name">Candle</div>
+          <div class="desc">Warm focused light</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M64 26 C58 36, 52 44, 52 56 C52 68, 58 76, 64 76 C70 76, 76 68, 76 56 C76 44, 70 36, 64 26 Z" fill="white"/>
+              <rect x="50" y="86" width="28" height="22" rx="3" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 11: BOOK + GLASSES -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <!-- book -->
+            <path d="M22 64 Q44 56, 64 64 Q84 56, 106 64 L106 100 Q84 92, 64 100 Q44 92, 22 100 Z" fill="white"/>
+            <line x1="64" y1="64" x2="64" y2="100" stroke="#7a6fd0" stroke-width="2.5"/>
+            <!-- glasses on top -->
+            <g fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="42" cy="38" r="14"/>
+              <circle cx="86" cy="38" r="14"/>
+              <line x1="56" y1="36" x2="72" y2="36"/>
+              <path d="M28 38 L24 30"/>
+              <path d="M100 38 L104 30"/>
+            </g>
+          </svg>
+          <div class="num">11</div>
+          <div class="name">Book & Glasses</div>
+          <div class="desc">Settle in to read</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M22 64 Q44 56, 64 64 Q84 56, 106 64 L106 100 Q84 92, 64 100 Q44 92, 22 100 Z" fill="white"/>
+              <g fill="none" stroke="white" stroke-width="6" stroke-linecap="round"><circle cx="42" cy="38" r="14"/><circle cx="86" cy="38" r="14"/><line x1="56" y1="36" x2="72" y2="36"/></g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- 12: EYE + BOOK -->
+        <div class="card">
+          <svg viewBox="0 0 128 128" class="icon-128">
+            <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+            <!-- eye top -->
+            <path d="M30 42 Q64 22, 98 42 Q64 60, 30 42 Z" fill="white"/>
+            <circle cx="64" cy="42" r="9" fill="#3a2820"/>
+            <circle cx="67" cy="39" r="2" fill="white"/>
+            <!-- book bottom -->
+            <path d="M22 76 Q44 68, 64 74 Q84 68, 106 76 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white"/>
+            <line x1="64" y1="74" x2="64" y2="100" stroke="#7a6fd0" stroke-width="2.5"/>
+          </svg>
+          <div class="num">12</div>
+          <div class="name">Eye & Book</div>
+          <div class="desc">Comfort + reading</div>
+          <div class="small-row"><small>16px</small>
+            <svg viewBox="0 0 128 128" class="icon-16">
+              <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+              <path d="M30 42 Q64 22, 98 42 Q64 60, 30 42 Z" fill="white"/>
+              <circle cx="64" cy="42" r="9" fill="#3a2820"/>
+              <path d="M22 76 Q44 68, 64 74 Q84 68, 106 76 L106 102 Q84 96, 64 100 Q44 96, 22 102 Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

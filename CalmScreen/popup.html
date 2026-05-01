@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CalmScreen</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hd">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 12 Q12 17, 20 12"/>
+              <line x1="6.8" y1="14.6" x2="6.1" y2="16.2"/>
+              <line x1="9.4" y1="15.8" x2="9.0" y2="17.6"/>
+              <line x1="12.0" y1="16.1" x2="12.0" y2="18.0"/>
+              <line x1="14.6" y1="15.8" x2="15.0" y2="17.6"/>
+              <line x1="17.2" y1="14.6" x2="17.9" y2="16.2"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">CalmScreen</span>
+            <span class="origin" id="originLabel">—</span>
+          </div>
+        </div>
+        <label class="site-toggle" title="Enable / disable on this site">
+          <input id="siteToggle" type="checkbox" />
+          <span class="track"><span class="thumb"></span></span>
+        </label>
+      </header>
+
+      <section class="presets">
+        <button class="preset" data-preset="day">
+          <span class="p-emoji">☀️</span>
+          <span class="p-name">Day</span>
+        </button>
+        <button class="preset" data-preset="evening">
+          <span class="p-emoji">🌅</span>
+          <span class="p-name">Evening</span>
+        </button>
+        <button class="preset" data-preset="night">
+          <span class="p-emoji">🌙</span>
+          <span class="p-name">Night</span>
+        </button>
+      </section>
+
+      <section class="sliders">
+        <div class="sl sl-brightness">
+          <div class="sl-head">
+            <span class="sl-name">Brightness</span>
+            <span class="sl-val" id="vBrightness">100%</span>
+          </div>
+          <div class="sl-row">
+            <span class="sl-icon sl-icon-l" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <circle cx="8" cy="8" r="2.6"/>
+              </svg>
+            </span>
+            <input id="sBrightness" type="range" min="10" max="100" step="1"
+                   title="Drag, scroll, or use ← → arrows. Double-click to reset." />
+            <span class="sl-icon sl-icon-r" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                <line x1="8" y1="1.5" x2="8" y2="3.2"/>
+                <line x1="8" y1="12.8" x2="8" y2="14.5"/>
+                <line x1="1.5" y1="8" x2="3.2" y2="8"/>
+                <line x1="12.8" y1="8" x2="14.5" y2="8"/>
+                <line x1="3.4" y1="3.4" x2="4.5" y2="4.5"/>
+                <line x1="11.5" y1="11.5" x2="12.6" y2="12.6"/>
+                <line x1="3.4" y1="12.6" x2="4.5" y2="11.5"/>
+                <line x1="11.5" y1="4.5" x2="12.6" y2="3.4"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="sl sl-warmth">
+          <div class="sl-head">
+            <span class="sl-name">Warmth</span>
+            <span class="sl-val" id="vWarmth">0%</span>
+          </div>
+          <div class="sl-row">
+            <span class="sl-icon sl-icon-l sl-cool" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <line x1="8" y1="2" x2="8" y2="14"/>
+                <line x1="2" y1="8" x2="14" y2="8"/>
+                <line x1="3.5" y1="3.5" x2="12.5" y2="12.5"/>
+                <line x1="3.5" y1="12.5" x2="12.5" y2="3.5"/>
+              </svg>
+            </span>
+            <input id="sWarmth" type="range" min="0" max="100" step="1"
+                   title="Drag, scroll, or use ← → arrows. Double-click to reset." />
+            <span class="sl-icon sl-icon-r sl-warm" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2 C 6 5, 4 7, 4 10 a 4 4 0 0 0 8 0 c 0 -3 -2 -5 -4 -8 z" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="ft">
+        <kbd>⌥</kbd><kbd>⇧</kbd><kbd>C</kbd>
+        <span>toggle on this site</span>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

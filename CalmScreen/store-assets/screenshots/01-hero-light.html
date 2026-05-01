@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CalmScreen — Easy on the eyes (light)</title>
+    <link rel="stylesheet" href="frame.css" />
+    <link rel="stylesheet" href="popup-mock.css" />
+    <style>
+      .popup-stage {
+        position: absolute;
+        right: 90px; top: 96px;
+        transform: rotate(-1.6deg) scale(1.45);
+        transform-origin: top right;
+        z-index: 3;
+      }
+      .popup-glow {
+        position: absolute;
+        right: 30px; top: 70px;
+        width: 560px; height: 560px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(91,141,239,0.25), transparent 70%);
+        z-index: 1;
+        filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="popup-glow"></div>
+
+      <div class="copy">
+        <div class="eyebrow">
+          <span class="dot"></span> Eye comfort · Chrome extension
+        </div>
+        <h1 class="big">Easy on the <span class="grad">eyes.</span><br/>All day.</h1>
+        <p class="lead">Two sliders. Three presets. Nothing else. CalmScreen takes the harsh blue out of long sessions — quietly, on demand, on every site.</p>
+        <ul class="bullets">
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            Drag to dim. Drag to warm. That's it.
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            Day · Evening · Night presets — one click each
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            All local. No analytics. No accounts.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Popup mock — Day preset, 100% brightness, 0% warmth -->
+      <div class="popup-stage">
+        <div class="pm">
+          <div class="pm-app">
+            <div class="pm-hd">
+              <div class="pm-brand">
+                <div class="pm-mark">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M4 12 Q12 17, 20 12"/>
+                    <line x1="6.8" y1="14.6" x2="6.1" y2="16.2"/>
+                    <line x1="9.4" y1="15.8" x2="9.0" y2="17.6"/>
+                    <line x1="12.0" y1="16.1" x2="12.0" y2="18.0"/>
+                    <line x1="14.6" y1="15.8" x2="15.0" y2="17.6"/>
+                    <line x1="17.2" y1="14.6" x2="17.9" y2="16.2"/>
+                  </svg>
+                </div>
+                <div class="pm-brand-text">
+                  <span class="pm-brand-name">CalmScreen</span>
+                  <span class="pm-origin">nytimes.com</span>
+                </div>
+              </div>
+              <div class="pm-toggle"></div>
+            </div>
+
+            <div class="pm-presets">
+              <div class="pm-preset on"><span class="pe">☀️</span><span class="pn">Day</span></div>
+              <div class="pm-preset"><span class="pe">🌅</span><span class="pn">Evening</span></div>
+              <div class="pm-preset"><span class="pe">🌙</span><span class="pn">Night</span></div>
+            </div>
+
+            <div class="pm-sliders">
+              <div class="pm-sl">
+                <div class="pm-sl-head">
+                  <span class="pm-sl-name">Brightness</span>
+                  <span class="pm-sl-val">100%</span>
+                </div>
+                <div class="pm-sl-row">
+                  <span class="pm-sl-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="2.6"/></svg></span>
+                  <div class="pm-track brightness"><span class="pm-thumb" style="left: 100%;"></span></div>
+                  <span class="pm-sl-icon" style="color:#3a3a44">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                      <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                      <line x1="8" y1="1.5" x2="8" y2="3.2"/><line x1="8" y1="12.8" x2="8" y2="14.5"/>
+                      <line x1="1.5" y1="8" x2="3.2" y2="8"/><line x1="12.8" y1="8" x2="14.5" y2="8"/>
+                      <line x1="3.4" y1="3.4" x2="4.5" y2="4.5"/><line x1="11.5" y1="11.5" x2="12.6" y2="12.6"/>
+                      <line x1="3.4" y1="12.6" x2="4.5" y2="11.5"/><line x1="11.5" y1="4.5" x2="12.6" y2="3.4"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="pm-sl">
+                <div class="pm-sl-head">
+                  <span class="pm-sl-name">Warmth</span>
+                  <span class="pm-sl-val">0%</span>
+                </div>
+                <div class="pm-sl-row">
+                  <span class="pm-sl-icon cool">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                      <line x1="8" y1="2" x2="8" y2="14"/><line x1="2" y1="8" x2="14" y2="8"/>
+                      <line x1="3.5" y1="3.5" x2="12.5" y2="12.5"/><line x1="3.5" y1="12.5" x2="12.5" y2="3.5"/>
+                    </svg>
+                  </span>
+                  <div class="pm-track warmth"><span class="pm-thumb" style="left: 0%;"></span></div>
+                  <span class="pm-sl-icon warm">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 2 C 6 5, 4 7, 4 10 a 4 4 0 0 0 8 0 c 0 -3 -2 -5 -4 -8 z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pm-ft">
+              <kbd>⌥</kbd><kbd>⇧</kbd><kbd>C</kbd>
+              <span>toggle this site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wm">
+        <div class="logo-sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 12 Q12 17, 20 12"/>
+            <line x1="6.8" y1="14.6" x2="6.1" y2="16.2"/>
+            <line x1="9.4" y1="15.8" x2="9.0" y2="17.6"/>
+            <line x1="12.0" y1="16.1" x2="12.0" y2="18.0"/>
+            <line x1="14.6" y1="15.8" x2="15.0" y2="17.6"/>
+            <line x1="17.2" y1="14.6" x2="17.9" y2="16.2"/>
+          </svg>
+        </div>
+        <span><span class="wm-name">CalmScreen</span> <span class="wm-sep">·</span> for Chrome</span>
+      </div>
+    </div>
+  </body>
+</html>

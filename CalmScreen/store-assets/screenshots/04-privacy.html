@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CalmScreen — Local & private</title>
+    <link rel="stylesheet" href="frame.css" />
+    <link rel="stylesheet" href="popup-mock.css" />
+    <style>
+      .popup-stage {
+        position: absolute;
+        right: 110px; top: 110px;
+        transform: rotate(-1.6deg) scale(1.45);
+        transform-origin: top right;
+        z-index: 3;
+      }
+      .popup-glow {
+        position: absolute;
+        right: 30px; top: 70px;
+        width: 560px; height: 560px;
+        border-radius: 50%;
+        background: radial-gradient(closest-side, rgba(123, 198, 124, 0.25), transparent 70%);
+        z-index: 1;
+        filter: blur(20px);
+      }
+
+      /* Privacy badges below copy */
+      .badges {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 22px;
+        max-width: 460px;
+      }
+      .badge {
+        display: flex; align-items: center; gap: 12px;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.78);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(20,30,60,0.06);
+        border-radius: 12px;
+        font-size: 13px;
+        color: #1a1a24;
+        line-height: 1.35;
+      }
+      .stage.dark .badge {
+        background: rgba(20, 22, 32, 0.7);
+        border-color: rgba(255,255,255,0.06);
+        color: #f0f0f4;
+      }
+      .badge .b-icon {
+        width: 30px; height: 30px;
+        border-radius: 8px;
+        display: grid; place-items: center;
+        flex-shrink: 0;
+        color: white;
+      }
+      .badge.b1 .b-icon { background: linear-gradient(135deg, #5b8def, #a78bfa); box-shadow: 0 4px 10px rgba(91,141,239,0.32); }
+      .badge.b2 .b-icon { background: linear-gradient(135deg, #7bc67c, #59a35a); box-shadow: 0 4px 10px rgba(123,198,124,0.32); }
+      .badge.b3 .b-icon { background: linear-gradient(135deg, #e89b5a, #d77b40); box-shadow: 0 4px 10px rgba(232,155,90,0.32); }
+      .badge .b-icon svg { width: 16px; height: 16px; }
+      .badge .b-text strong {
+        display: block;
+        font-size: 13px; font-weight: 700;
+        margin-bottom: 1px;
+        letter-spacing: -0.005em;
+      }
+      .badge .b-text span {
+        font-size: 11.5px; color: #4a4a58;
+        letter-spacing: -0.005em;
+      }
+      .stage.dark .badge .b-text span { color: #c4c4ce; }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="popup-glow"></div>
+
+      <div class="copy">
+        <div class="eyebrow">
+          <span class="dot"></span> Per-site control · zero tracking
+        </div>
+        <h1 class="big">Yours. Local.<br/><span class="grad">Private.</span></h1>
+        <p class="lead">Disable on any site with one tap. Settings live in your browser, not on someone's server.</p>
+
+        <div class="badges">
+          <div class="badge b1">
+            <div class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <div class="b-text">
+              <strong>No data leaves the browser</strong>
+              <span>Settings stored in <code>chrome.storage.local</code>. No telemetry. No accounts.</span>
+            </div>
+          </div>
+
+          <div class="badge b2">
+            <div class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3 12h18"/>
+                <path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+              </svg>
+            </div>
+            <div class="b-text">
+              <strong>Per-site enable / disable</strong>
+              <span>One toggle remembers each site forever. Banking, design, video — your call.</span>
+            </div>
+          </div>
+
+          <div class="badge b3">
+            <div class="b-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="b-text">
+              <strong>No ads, no upsells, no premium tier</strong>
+              <span>One thing, done well. Free, forever.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popup mock — site disabled state -->
+      <div class="popup-stage">
+        <div class="pm disabled">
+          <div class="pm-app">
+            <div class="pm-hd">
+              <div class="pm-brand">
+                <div class="pm-mark">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M4 12 Q12 17, 20 12"/>
+                    <line x1="6.8" y1="14.6" x2="6.1" y2="16.2"/>
+                    <line x1="9.4" y1="15.8" x2="9.0" y2="17.6"/>
+                    <line x1="12.0" y1="16.1" x2="12.0" y2="18.0"/>
+                    <line x1="14.6" y1="15.8" x2="15.0" y2="17.6"/>
+                    <line x1="17.2" y1="14.6" x2="17.9" y2="16.2"/>
+                  </svg>
+                </div>
+                <div class="pm-brand-text">
+                  <span class="pm-brand-name">CalmScreen</span>
+                  <span class="pm-origin">figma.com</span>
+                </div>
+              </div>
+              <div class="pm-toggle off"></div>
+            </div>
+
+            <div class="pm-presets">
+              <div class="pm-preset"><span class="pe">☀️</span><span class="pn">Day</span></div>
+              <div class="pm-preset on"><span class="pe">🌅</span><span class="pn">Evening</span></div>
+              <div class="pm-preset"><span class="pe">🌙</span><span class="pn">Night</span></div>
+            </div>
+
+            <div class="pm-sliders">
+              <div class="pm-sl">
+                <div class="pm-sl-head">
+                  <span class="pm-sl-name">Brightness</span>
+                  <span class="pm-sl-val">92%</span>
+                </div>
+                <div class="pm-sl-row">
+                  <span class="pm-sl-icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="8" r="2.6"/></svg></span>
+                  <div class="pm-track brightness"><span class="pm-thumb" style="left: 92%;"></span></div>
+                  <span class="pm-sl-icon" style="color:#3a3a44">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                      <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                      <line x1="8" y1="1.5" x2="8" y2="3.2"/><line x1="8" y1="12.8" x2="8" y2="14.5"/>
+                      <line x1="1.5" y1="8" x2="3.2" y2="8"/><line x1="12.8" y1="8" x2="14.5" y2="8"/>
+                      <line x1="3.4" y1="3.4" x2="4.5" y2="4.5"/><line x1="11.5" y1="11.5" x2="12.6" y2="12.6"/>
+                      <line x1="3.4" y1="12.6" x2="4.5" y2="11.5"/><line x1="11.5" y1="4.5" x2="12.6" y2="3.4"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="pm-sl">
+                <div class="pm-sl-head">
+                  <span class="pm-sl-name">Warmth</span>
+                  <span class="pm-sl-val">45%</span>
+                </div>
+                <div class="pm-sl-row">
+                  <span class="pm-sl-icon cool">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                      <line x1="8" y1="2" x2="8" y2="14"/><line x1="2" y1="8" x2="14" y2="8"/>
+                      <line x1="3.5" y1="3.5" x2="12.5" y2="12.5"/><line x1="3.5" y1="12.5" x2="12.5" y2="3.5"/>
+                    </svg>
+                  </span>
+                  <div class="pm-track warmth"><span class="pm-thumb" style="left: 45%;"></span></div>
+                  <span class="pm-sl-icon warm">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 2 C 6 5, 4 7, 4 10 a 4 4 0 0 0 8 0 c 0 -3 -2 -5 -4 -8 z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pm-ft">
+              <kbd>⌥</kbd><kbd>⇧</kbd><kbd>C</kbd>
+              <span>toggle this site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
